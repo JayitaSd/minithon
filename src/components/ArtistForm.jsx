@@ -1,8 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function ArtistForm() {
   const navigate = useNavigate();  
+  useEffect(() => {
+    const isLoggedIn = localStorage.getItem("isLoggedIn");
+    if (isLoggedIn !== "true") {
+      navigate("/login"); // redirect if not logged in
+    }
+  }, [navigate]);
   const [formData, setFormData] = useState({
     name: "",
     email: "",

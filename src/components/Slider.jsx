@@ -40,9 +40,9 @@ export default function Slider({ details }) {
               </div>
 
               {/* Details */}
-              <div className="p-3 text-left">
+              {/* <div className="p-3 text-left">
                 {/* If it's an event */}
-                {detail.venue && (
+                {/* {detail.venue && (
                   <>
                     <div className="flex items-center gap-2 text-sm font-semibold">
                       <span className="text-blue-600 dark:text-blue-400">{detail.venue}</span>
@@ -52,10 +52,10 @@ export default function Slider({ details }) {
                       {detail.date}
                     </h3>
                   </>
-                )}
+                )} */}
 
                 {/* If it's an artist */}
-                {detail.artist && (
+                {/* {detail.artist && (
                   <>
                     <h3 className="font-bold text-lg text-blue-600 dark:text-blue-400">
                       {detail.artist}
@@ -65,7 +65,7 @@ export default function Slider({ details }) {
                     </p>
                   </>
                 )}
-              </div>
+              </div> */} 
             </div>
           </SwiperSlide>
         ))}

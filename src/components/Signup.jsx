@@ -14,6 +14,27 @@ export default function Signup() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Signup attempt:", { name, email, password, confirmPassword });
+    if (password !== confirmPassword) {
+    alert("Passwords do not match!");
+    return;
+  }
+
+  // Get existing users
+  const existingUsers = JSON.parse(localStorage.getItem("users")) || [];
+
+  // Check if email already exists
+  if (existingUsers.some((u) => u.email === email)) {
+    alert("User with this email already exists!");
+    return;
+  }
+
+  // Add new user
+  const newUser = { name, email, password };
+  const updatedUsers = [...existingUsers, newUser];
+  localStorage.setItem("users", JSON.stringify(updatedUsers));
+
+  alert("Signup successful! Please login.");
+  window.location.href = "/login";
   };
 
   return (

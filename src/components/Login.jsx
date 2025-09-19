@@ -12,6 +12,18 @@ export default function Login() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Login attempt:", { email, password });
+    const existingUsers = JSON.parse(localStorage.getItem("users")) || [];
+    const user = existingUsers.find(
+      (u) => u.email === email && u.password === password
+    );
+    if (!user) {
+      alert("Invalid email or password!");
+      return;
+    }
+    localStorage.setItem("isLoggedIn", "true");
+    localStorage.setItem("userEmail", email);
+    // Redirect to artist form (or home)
+    window.location.href = "/artist-form";
   };
 
   return (

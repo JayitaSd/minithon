@@ -15,10 +15,7 @@ export default function HomePage() {
   return (
     <main className="min-h-screen transition-colors bg-gradient-to-b from-gray-900 via-gray-950 to-black text-slate-100">
 
-      {/* Hero Slider */}
-      <section className="relative w-full h-[600px] md:h-[700px]">
-        <Slider details={details} />
-      </section>
+
 
       {/* Profile Section */}
       <section className="relative w-full h-[700px] flex items-center justify-center overflow-hidden">
@@ -56,6 +53,11 @@ export default function HomePage() {
           </div>
 
         </div>
+      </section>
+
+            {/* Hero Slider */}
+      <section className="relative w-full h-[600px] md:h-[700px]">
+        <Slider details={details} />
       </section>
 
     </main>
