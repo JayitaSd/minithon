@@ -8,21 +8,30 @@ import ForgotPassword from "./components/ForgotPassword";
 import ArtistStatci from "./components/ArtistStatci";
 import ArtistForm from "./components/ArtistForm";
 
+import HomePage from "./components/HomePage";
+import ContactUs from "./components/ContactUs";
+import Gallery from "./components/Gallery";
 const App = () => {
   return (
     <Router>
-      <div className="relative min-h-screen bg-gray-50 dark:bg-slate-900">
+      <div className="relative min-h-screen bg-gradient-to-b from-gray-900 via-gray-950 to-black">
         <Navbar />
-
+<main className="min-h-screen transition-colors pt-20">
         {/* Routes */}
         <Routes>
           {/* <Route path="/" element={<LandingPage />} /> */}
           <Route path="/login" element={<Login />} />    {/* lowercase */}
           <Route path="/signup" element={<Signup />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
-          <Route path="/" element={<ArtistForm />} />
+          <Route path="/artist-form" element={<ArtistForm />} />
           <Route path="/static" element={<ArtistStatci />} />
+          <Route path="/" element={<HomePage />} />
+             <Route path="/contact-us" element={<ContactUs />} />
+              <Route path="/gallery" element={<Gallery />} />
+
+
         </Routes>
+        </main>
       </div>
     </Router>
   );
@@ -31,6 +40,3 @@ const App = () => {
 export default App;
 
 
-{/* <div className="absolute bottom-20 left-1/3 text-5xl text-cyan-400 opacity-70 animate-spin-slow drop-shadow-lg">
-  🎧
-</div> */}

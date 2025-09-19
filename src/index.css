@@ -1,4 +1,7 @@
 @import "tailwindcss";
+*{
+  font-family: 'Courier New', Courier, monospace;
+}
 /*
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
