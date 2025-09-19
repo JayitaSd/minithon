@@ -8,7 +8,7 @@ import "swiper/css/navigation";
 
 export default function Slider({ details }) {
   return (
-    <section className="p-6 w-full max-w-7xl mx-auto">
+    <section className="p-6 t-28 w-full max-w-7xl mx-auto">
       <Swiper
         modules={[Navigation, Autoplay]}
         navigation={{
@@ -16,15 +16,15 @@ export default function Slider({ details }) {
           prevEl: ".swiper-button-prev-custom",
         }}
         spaceBetween={20}
-        slidesPerView={1.2}
+        slidesPerView={1}
         autoplay={{
           delay: 5000,
           disableOnInteraction: false,
         }}
         loop={true}
         breakpoints={{
-          640: { slidesPerView: 2 },
-          1024: { slidesPerView: 4 },
+          640: { slidesPerView: 1},
+          1024: { slidesPerView: 1 },
         }}
       >
         {details.map((detail, i) => (
@@ -35,7 +35,7 @@ export default function Slider({ details }) {
                 <img
                   src={detail.img}
                   alt={detail.description || detail.artist}
-                  className="w-full h-72 object-cover transition-transform duration-500 hover:scale-110"
+                  className="w-full h-120 object-cover overflow-hidden transition-transform duration-500 hover:scale-110"
                 />
               </div>
 
