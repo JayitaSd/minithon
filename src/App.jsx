@@ -5,6 +5,8 @@ import LandingPage from "./components/LandingPage";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
 import ForgotPassword from "./components/ForgotPassword";
+import ArtistStatci from "./components/ArtistStatci";
+import ArtistForm from "./components/ArtistForm";
 
 const App = () => {
   return (
@@ -14,10 +16,12 @@ const App = () => {
 
         {/* Routes */}
         <Routes>
-          <Route path="/" element={<LandingPage />} />
+          {/* <Route path="/" element={<LandingPage />} /> */}
           <Route path="/login" element={<Login />} />    {/* lowercase */}
           <Route path="/signup" element={<Signup />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
+          <Route path="/" element={<ArtistForm />} />
+          <Route path="/static" element={<ArtistStatci />} />
         </Routes>
       </div>
     </Router>
